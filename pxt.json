@@ -1,7 +1,7 @@
 {
-    "name": "M0uld-K1ng-BT",
+    "name": "M0uld-K1ng-BT-Module-6.0",
     "version": "0.0.1",
-    "description": "An extension to control M0uld K1ng Modules with Bluetooth for Micro:bit using Makecode",
+    "description": "control Bluetooth M0uld K1ng Module 6.0",
     "license": "MIT",
     "dependencies": {
         "core": "*",
