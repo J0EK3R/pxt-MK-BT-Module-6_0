@@ -1,0 +1,30 @@
+{
+    "name": "M0uld-K1ng-BT",
+    "version": "0.0.1",
+    "description": "An extension to control M0uld K1ng Modules with Bluetooth for Micro:bit using Makecode",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*",
+        "BleAdvertisingManager": "github:J0EK3R/pxt-BleAdvertisingManager"
+    },
+    "files": [
+        "README.md",
+        "enums.d.ts",
+        "shims.d.ts",
+        "mk_module_6_0.ts",
+        "mk_module_6_0.cpp",
+        "Module_6_0_Service.cpp",
+        "Module_6_0_Service.h"
+    ],
+    "public": true,
+    "targetVersions": {
+        "target": "7.0.57",
+        "pxt": "11.1.13"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "disablesVariants": [
+        "mbdal"
+    ]
+}
