@@ -133,7 +133,7 @@ namespace mk_module_6_0
     //% block="$module: get Version"
     //% shim=mk_module_6_0::getVersion
     //% blockGap=8 weight=60 advanced=true
-    export function getversion(moduleNo: Module): number
+    export function getVersion(module: Module): number
     {
         return 0;
     }
