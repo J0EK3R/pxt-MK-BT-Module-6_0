@@ -103,7 +103,7 @@ namespace mk_module_6_0
 
 
     /**
-     *  Take over data to send
+     *  take over data to send
      * @param moduleNo [0..2]
      */
     void setData(uint8_t moduleNo) 

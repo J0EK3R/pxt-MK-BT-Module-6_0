@@ -99,14 +99,14 @@ namespace mk_module_6_0
     }
 
     /**
-     *  Take over data to send
+     *  take over data to send
      * @param module module, eg: "Module.M1"
      */
     //% blockId=mk6_setdata 
     //% block="$module: take over data to send"
     //% shim=mk_module_6_0::setData
     //% blockGap=8 weight=60
-    export function setdata(module: Module): void
+    export function setData(module: Module): void
     {
         return;
     }
