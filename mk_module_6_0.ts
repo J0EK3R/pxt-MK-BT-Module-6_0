@@ -2,8 +2,11 @@
 /**
  * Support for M0uld K1ng Module 6.0
  */
-//% color=#00c300 weight=100 icon="\uf294" block="MK Module 6.0"
-namespace mk_module_6_0
+//% block="MK Module 6.0"
+//% icon="\uf294"
+//% weight=100
+//% color=#00c300
+namespace mk
 {
     /**
      *  Selection of M0uld K1ng Module 6.0
@@ -58,11 +61,29 @@ namespace mk_module_6_0
      */
     //% blockId=mk6_setchannel 
     //% block="$module: set $channel value to $value"
-    //% value.min=-100 value.max=100
+    //% value.min=-100 value.max=100 value.defl=0
     //% shim=mk_module_6_0::setChannel
     //% blockGap=8 weight=60
     export function setChannel(module: Module, channel: Channel, value: number = 0): void
     {
+        return;
+    }
+
+    /**
+     *  set value (in percent) of channel and take over data
+     * @param module module, eg: "Module.M1"
+     * @param channel channel, eg: "Channel.A"
+     * @param value [-100..100], eg: "0"
+     */
+    //% blockId=mk6_setandsendchannel 
+    //% block="$module: set $channel value to $value and send"
+    //% value.min=-100 value.max=100 value.defl=0
+    //% shim=mk_module_6_0::setChannel
+    //% blockGap=8 weight=60
+    export function setAndSendChannel(module: Module, channel: Channel, value: number = 0): void
+    {
+        setChannel(module, channel, value);
+        setData(module);
         return;
     }
 
@@ -74,7 +95,7 @@ namespace mk_module_6_0
      */
     //% blockId=mk6_setchanneloffset
     //% block="$module: set $channel offset to $offset"
-    //% offset.min=0 offset.max=100
+    //% offset.min=0 offset.max=100 offset.defl=0
     //% shim=mk_module_6_0::setChannelOffset
     //% blockGap=8 weight=60
     export function setChannelOffset(module: Module, channel: Channel, offset: number = 0): void
@@ -90,7 +111,7 @@ namespace mk_module_6_0
      */
     //% blockId=mk6_setchannelmax
     //% block="$module: set $channel maximum to $maximum"
-    //% maximum.min=0 maximum.max=100
+    //% maximum.min=0 maximum.max=100 maximum.defl=100
     //% shim=mk_module_6_0::setChannelMax
     //% blockGap=8 weight=60
     export function setChannelMax(module: Module, channel: Channel, maximum: number = 100): void
