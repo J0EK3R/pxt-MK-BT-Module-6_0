@@ -57,7 +57,7 @@ namespace mk_module_6_0
      * @param value [-100..100], eg: "80"
      */
     //% blockId=mk6_setchannel 
-    //% block="MK6.0 %module: set value %value %% of %channel"
+    //% block="MK6.0 %module: set %channel value to %value %"
     //% value.min=-100 value.max=100
     //% shim=mk_module_6_0::setChannel
     //% blockGap=8 weight=60
@@ -73,7 +73,7 @@ namespace mk_module_6_0
      * @param offset [0..100], eg: "0"
      */
     //% blockId=mk6_setchanneloffset
-    //% block="MK6.0 %module: set offset value %offset %% of %channel"
+    //% block="MK6.0 %module: set %channel offset to %offset %"
     //% offset.min=0 offset.max=100
     //% shim=mk_module_6_0::setChannelOffset
     //% blockGap=8 weight=60
@@ -89,7 +89,7 @@ namespace mk_module_6_0
      * @param maximum [0..100], eg: "100"
      */
     //% blockId=mk6_setchannelmax
-    //% block="MK6.0 %module: set maximum value %maximum %% of %channel"
+    //% block="MK6.0 %module: set %channel maximum to %maximum %"
     //% maximum.min=0 maximum.max=100
     //% shim=mk_module_6_0::setChannelMax
     //% blockGap=8 weight=60
