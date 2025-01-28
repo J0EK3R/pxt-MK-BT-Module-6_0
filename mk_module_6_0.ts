@@ -42,7 +42,7 @@ namespace mk_module_6_0
      * @param module module, eg: "Module.M1"
      */
     //% blockId=mk6_init
-    //% block="MK6.0 $module: init"
+    //% block="$module: init"
     //% shim=mk_module_6_0::init
     //% blockGap=8 weight=60
     export function init(module: Module): void
@@ -57,11 +57,11 @@ namespace mk_module_6_0
      * @param value [-100..100], eg: "80"
      */
     //% blockId=mk6_setchannel 
-    //% block="MK6.0 $module: set $channel value to $value"
+    //% block="$module: set $channel value to $value"
     //% value.min=-100 value.max=100
     //% shim=mk_module_6_0::setChannel
     //% blockGap=8 weight=60
-    export function setChannel(module: Module, channel: Channel, value: number): void
+    export function setChannel(module: Module, channel: Channel, value: number = 0): void
     {
         return;
     }
@@ -73,11 +73,11 @@ namespace mk_module_6_0
      * @param offset [0..100], eg: "0"
      */
     //% blockId=mk6_setchanneloffset
-    //% block="MK6.0 $module: set $channel offset to $offset"
+    //% block="$module: set $channel offset to $offset"
     //% offset.min=0 offset.max=100
     //% shim=mk_module_6_0::setChannelOffset
     //% blockGap=8 weight=60
-    export function setChannelOffset(moduleNo: Module, channel: Channel, offset: number = 0): void
+    export function setChannelOffset(module: Module, channel: Channel, offset: number = 0): void
     {
         return;
     }
@@ -89,11 +89,11 @@ namespace mk_module_6_0
      * @param maximum [0..100], eg: "100"
      */
     //% blockId=mk6_setchannelmax
-    //% block="MK6.0 $module: set $channel maximum to $maximum"
+    //% block="$module: set $channel maximum to $maximum"
     //% maximum.min=0 maximum.max=100
     //% shim=mk_module_6_0::setChannelMax
     //% blockGap=8 weight=60
-    export function setChannelMax(moduleNo: Module, channel: Channel, maximum: number = 100): void
+    export function setChannelMax(module: Module, channel: Channel, maximum: number = 100): void
     {
         return;
     }
@@ -103,7 +103,7 @@ namespace mk_module_6_0
      * @param module module, eg: "Module.M1"
      */
     //% blockId=mk6_setdata 
-    //% block="MK6.0 $module: take over data to send"
+    //% block="$module: take over data to send"
     //% shim=mk_module_6_0::setData
     //% blockGap=8 weight=60
     export function setdata(module: Module): void
@@ -116,7 +116,7 @@ namespace mk_module_6_0
      * @param module module, eg: "Module.M1"
      */
     //% blockId=mk6_stop
-    //% block="MK6.0 $module: stop"
+    //% block="$module: stop"
     //% shim=mk_module_6_0::stop
     //% weight=10 blockGap=8
     export function stop(module: Module): void
@@ -130,7 +130,7 @@ namespace mk_module_6_0
      * @param module module, eg: "Module.M1"
      */
     //% blockId=mk6_getversion 
-    //% block="MK6.0 $module: get Version"
+    //% block="$module: get Version"
     //% shim=mk_module_6_0::getVersion
     //% blockGap=8 weight=60 advanced=true
     export function getversion(moduleNo: Module): number
