@@ -54,7 +54,7 @@ namespace mk_module_6_0
      *  set value (in percent) of channel
      * @param module module, eg: "Module.M1"
      * @param channel channel, eg: "Channel.A"
-     * @param value [-100..100], eg: "80"
+     * @param value [-100..100], eg: "0"
      */
     //% blockId=mk6_setchannel 
     //% block="$module: set $channel value to $value"
