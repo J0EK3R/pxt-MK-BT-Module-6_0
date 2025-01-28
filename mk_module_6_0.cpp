@@ -58,7 +58,7 @@ namespace mk_module_6_0
      *  set value (in percent) of channel
      * @param moduleNo [0..2]
      * @param channelNo [0..5]
-     * @param value [-100..100], eg: "80"
+     * @param value [-100..100], eg: "0"
      */
     void setChannel(uint8_t moduleNo, uint8_t channelNo, float value) 
     {
