@@ -1,5 +1,5 @@
 // Auto-generated. Do not edit.
-declare namespace mk6 {
+declare namespace MK6 {
 }
 
 // Auto-generated. Do not edit. Really.

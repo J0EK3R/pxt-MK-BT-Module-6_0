@@ -6,18 +6,18 @@
 //% icon="\uf294"
 //% weight=100
 //% color=#00c300
-namespace mk6
+namespace MK6
 {
     /**
      *  Selection of M0uld K1ng Module 6.0
      */
     export enum Module
     {
-        //% block="Module 1" enumval=0
+        //% block="MK6 1" enumval=0
         M1 = 0,
-        //% block="Module 2" enumval=1
+        //% block="MK6 2" enumval=1
         M2 = 1,
-        //% block="Module 3" enumval=2
+        //% block="MK6 3" enumval=2
         M3 = 2,
     }
 
@@ -46,6 +46,7 @@ namespace mk6
      */
     //% blockId=mk6_init
     //% block="$module: init"
+    //% group="M0uld K1ng Module 6.0"
     //% shim=mk_module_6_0::init
     //% blockGap=8 weight=60
     export function init(module: Module): void
@@ -60,7 +61,8 @@ namespace mk6
      * @param value [-100..100], eg: "0"
      */
     //% blockId=mk6_setchannel 
-    //% block="$module: set $channel value to $value"
+    //% block="$module: set value $channel to $value"
+    //% group="M0uld K1ng Module 6.0"
     //% value.min=-100 value.max=100 value.defl=0
     //% shim=mk_module_6_0::setChannel
     //% blockGap=8 weight=60
@@ -76,7 +78,8 @@ namespace mk6
      * @param value [-100..100], eg: "0"
      */
     //% blockId=mk6_setandsendchannel 
-    //% block="$module: set $channel value to $value and send"
+    //% block="$module: set value $channel to $value and send"
+    //% group="M0uld K1ng Module 6.0"
     //% value.min=-100 value.max=100 value.defl=0
     //% shim=mk_module_6_0::setChannel
     //% blockGap=8 weight=60
@@ -94,7 +97,8 @@ namespace mk6
      * @param offset [0..100], eg: "0"
      */
     //% blockId=mk6_setchanneloffset
-    //% block="$module: set $channel offset to $offset"
+    //% block="$module: set offset $channel to $offset"
+    //% group="M0uld K1ng Module 6.0"
     //% offset.min=0 offset.max=100 offset.defl=0
     //% shim=mk_module_6_0::setChannelOffset
     //% blockGap=8 weight=60
@@ -110,7 +114,8 @@ namespace mk6
      * @param maximum [0..100], eg: "100"
      */
     //% blockId=mk6_setchannelmax
-    //% block="$module: set $channel maximum to $maximum"
+    //% block="$module: set maximum $channel to $maximum"
+    //% group="M0uld K1ng Module 6.0"
     //% maximum.min=0 maximum.max=100 maximum.defl=100
     //% shim=mk_module_6_0::setChannelMax
     //% blockGap=8 weight=60
@@ -125,6 +130,7 @@ namespace mk6
      */
     //% blockId=mk6_setdata 
     //% block="$module: take over data to send"
+    //% group="M0uld K1ng Module 6.0"
     //% shim=mk_module_6_0::setData
     //% blockGap=8 weight=60
     export function setData(module: Module): void
@@ -138,6 +144,7 @@ namespace mk6
      */
     //% blockId=mk6_stop
     //% block="$module: stop"
+    //% group="M0uld K1ng Module 6.0"
     //% shim=mk_module_6_0::stop
     //% weight=10 blockGap=8
     export function stop(module: Module): void
@@ -152,6 +159,7 @@ namespace mk6
      */
     //% blockId=mk6_getversion 
     //% block="$module: get Version"
+    //% group="M0uld K1ng Module 6.0"
     //% shim=mk_module_6_0::getVersion
     //% blockGap=8 weight=60 advanced=true
     export function getVersion(module: Module): number
