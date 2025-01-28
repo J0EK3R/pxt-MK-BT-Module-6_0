@@ -1,11 +1,5 @@
 /// <reference no-default-lib="true"/>
-/**
- * Support for M0uld K1ng Module 6.0
- */
-//% block="MK Modules"
-//% icon="\uf294"
-//% weight=100
-//% color=#00c300
+
 namespace MK6
 {
     /**
@@ -39,7 +33,17 @@ namespace MK6
         //% block="Channel F" enumval=5
         F = 5
     }
+}
 
+/**
+ * Support for M0uld K1ng Module 6.0
+ */
+//% block="MK Modules"
+//% icon="\uf294"
+//% weight=100
+//% color=#00c300
+namespace MK
+{
     /**
      *  initialisation of the module
      * @param module module, eg: "Module.M1"
@@ -47,9 +51,9 @@ namespace MK6
     //% blockId=mk6_init
     //% block="$module: init"
     //% group="M0uld K1ng Module 6.0"
-    //% shim=mk_module_6_0::init
+    //% shim=MK6::init
     //% blockGap=8 weight=60
-    export function init(module: Module): void
+    export function init(module: MK6.Module): void
     {
         return;
     }
@@ -64,9 +68,9 @@ namespace MK6
     //% block="$module: set value $channel to $value"
     //% group="M0uld K1ng Module 6.0"
     //% value.min=-100 value.max=100 value.defl=0
-    //% shim=mk_module_6_0::setChannel
+    //% shim=MK6::setChannel
     //% blockGap=8 weight=60
-    export function setChannel(module: Module, channel: Channel, value: number = 0): void
+    export function setChannel(module: MK6.Module, channel: MK6.Channel, value: number = 0): void
     {
         return;
     }
@@ -81,9 +85,9 @@ namespace MK6
     //% block="$module: set value $channel to $value and send"
     //% group="M0uld K1ng Module 6.0"
     //% value.min=-100 value.max=100 value.defl=0
-    //% shim=mk_module_6_0::setChannel
+    //% shim=MK6::setChannel
     //% blockGap=8 weight=60
-    export function setAndSendChannel(module: Module, channel: Channel, value: number = 0): void
+    export function setAndSendChannel(module: MK6.Module, channel: MK6.Channel, value: number = 0): void
     {
         setChannel(module, channel, value);
         setData(module);
@@ -100,9 +104,9 @@ namespace MK6
     //% block="$module: set offset $channel to $offset"
     //% group="M0uld K1ng Module 6.0"
     //% offset.min=0 offset.max=100 offset.defl=0
-    //% shim=mk_module_6_0::setChannelOffset
+    //% shim=MK6::setChannelOffset
     //% blockGap=8 weight=60
-    export function setChannelOffset(module: Module, channel: Channel, offset: number = 0): void
+    export function setChannelOffset(module: MK6.Module, channel: MK6.Channel, offset: number = 0): void
     {
         return;
     }
@@ -117,9 +121,9 @@ namespace MK6
     //% block="$module: set maximum $channel to $maximum"
     //% group="M0uld K1ng Module 6.0"
     //% maximum.min=0 maximum.max=100 maximum.defl=100
-    //% shim=mk_module_6_0::setChannelMax
+    //% shim=MK6::setChannelMax
     //% blockGap=8 weight=60
-    export function setChannelMax(module: Module, channel: Channel, maximum: number = 100): void
+    export function setChannelMax(module: MK6.Module, channel: MK6.Channel, maximum: number = 100): void
     {
         return;
     }
@@ -131,9 +135,9 @@ namespace MK6
     //% blockId=mk6_setdata 
     //% block="$module: take over data to send"
     //% group="M0uld K1ng Module 6.0"
-    //% shim=mk_module_6_0::setData
+    //% shim=MK6::setData
     //% blockGap=8 weight=60
-    export function setData(module: Module): void
+    export function setData(module: MK6.Module): void
     {
         return;
     }
@@ -145,9 +149,9 @@ namespace MK6
     //% blockId=mk6_stop
     //% block="$module: stop"
     //% group="M0uld K1ng Module 6.0"
-    //% shim=mk_module_6_0::stop
+    //% shim=MK6::stop
     //% weight=10 blockGap=8
-    export function stop(module: Module): void
+    export function stop(module: MK6.Module): void
     {
         return;
     };
@@ -160,9 +164,9 @@ namespace MK6
     //% blockId=mk6_getversion 
     //% block="$module: get Version"
     //% group="M0uld K1ng Module 6.0"
-    //% shim=mk_module_6_0::getVersion
+    //% shim=MK6::getVersion
     //% blockGap=8 weight=60 advanced=true
-    export function getVersion(module: Module): number
+    export function getVersion(module: MK6.Module): number
     {
         return 0;
     }
