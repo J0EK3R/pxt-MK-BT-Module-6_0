@@ -2,11 +2,11 @@
 /**
  * Support for M0uld K1ng Module 6.0
  */
-//% block="MK Module 6.0"
+//% block="MK Modules"
 //% icon="\uf294"
 //% weight=100
 //% color=#00c300
-namespace mk
+namespace mk6
 {
     /**
      *  Selection of M0uld K1ng Module 6.0
