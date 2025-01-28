@@ -10,7 +10,7 @@ using namespace pxt;
 /**
  * Support for M0uld K1ng Module 6.0.
  */
-namespace MK6
+namespace MK
 {
     Module_6_0_Service* _pService[3] = 
     {

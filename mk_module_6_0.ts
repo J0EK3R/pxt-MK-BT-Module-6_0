@@ -51,7 +51,7 @@ namespace MK
     //% blockId=mk6_init
     //% block="$module: init"
     //% group="M0uld K1ng Module 6.0"
-    //% shim=MK6::init
+    //% shim=MK::init
     //% blockGap=8 weight=60
     export function init(module: MK6.Module): void
     {
@@ -68,7 +68,7 @@ namespace MK
     //% block="$module: set value $channel to $value"
     //% group="M0uld K1ng Module 6.0"
     //% value.min=-100 value.max=100 value.defl=0
-    //% shim=MK6::setChannel
+    //% shim=MK::setChannel
     //% blockGap=8 weight=60
     export function setChannel(module: MK6.Module, channel: MK6.Channel, value: number = 0): void
     {
@@ -85,7 +85,7 @@ namespace MK
     //% block="$module: set value $channel to $value and send"
     //% group="M0uld K1ng Module 6.0"
     //% value.min=-100 value.max=100 value.defl=0
-    //% shim=MK6::setChannel
+    //% shim=MK::setChannel
     //% blockGap=8 weight=60
     export function setAndSendChannel(module: MK6.Module, channel: MK6.Channel, value: number = 0): void
     {
@@ -104,7 +104,7 @@ namespace MK
     //% block="$module: set offset $channel to $offset"
     //% group="M0uld K1ng Module 6.0"
     //% offset.min=0 offset.max=100 offset.defl=0
-    //% shim=MK6::setChannelOffset
+    //% shim=MK::setChannelOffset
     //% blockGap=8 weight=60
     export function setChannelOffset(module: MK6.Module, channel: MK6.Channel, offset: number = 0): void
     {
@@ -121,7 +121,7 @@ namespace MK
     //% block="$module: set maximum $channel to $maximum"
     //% group="M0uld K1ng Module 6.0"
     //% maximum.min=0 maximum.max=100 maximum.defl=100
-    //% shim=MK6::setChannelMax
+    //% shim=MK::setChannelMax
     //% blockGap=8 weight=60
     export function setChannelMax(module: MK6.Module, channel: MK6.Channel, maximum: number = 100): void
     {
@@ -135,7 +135,7 @@ namespace MK
     //% blockId=mk6_setdata 
     //% block="$module: take over data to send"
     //% group="M0uld K1ng Module 6.0"
-    //% shim=MK6::setData
+    //% shim=MK::setData
     //% blockGap=8 weight=60
     export function setData(module: MK6.Module): void
     {
@@ -149,7 +149,7 @@ namespace MK
     //% blockId=mk6_stop
     //% block="$module: stop"
     //% group="M0uld K1ng Module 6.0"
-    //% shim=MK6::stop
+    //% shim=MK::stop
     //% weight=10 blockGap=8
     export function stop(module: MK6.Module): void
     {
@@ -164,7 +164,7 @@ namespace MK
     //% blockId=mk6_getversion 
     //% block="$module: get Version"
     //% group="M0uld K1ng Module 6.0"
-    //% shim=MK6::getVersion
+    //% shim=MK::getVersion
     //% blockGap=8 weight=60 advanced=true
     export function getVersion(module: MK6.Module): number
     {
