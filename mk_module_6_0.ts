@@ -1,11 +1,26 @@
 /// <reference no-default-lib="true"/>
 /**
- * Support for M0uld K1ng Module 6.0.
+ * Support for M0uld K1ng Module 6.0
  */
 //% color=#00c300 weight=100 icon="\uf294" block="MK Module 6.0"
 namespace mk_module_6_0
 {
+    /**
+     *  Selection of M0uld K1ng Module 6.0
+     */
+    export enum Module
+    {
+        //% block="Module 1" enumval=0
+        M1 = 0,
+        //% block="Module 2" enumval=1
+        M2 = 1,
+        //% block="Module 3" enumval=2
+        M3 = 2,
+    }
 
+    /**
+     *  Channel on M0uld K1ng Module 6.0
+     */
     export enum Channel
     {
         //% block="Channel A" enumval=0
@@ -22,93 +37,100 @@ namespace mk_module_6_0
         F = 5
     }
 
-    export enum Module
-    {
-        //% block="Module 1" enumval=0
-        M1 = 0,
-        //% block="Module 2" enumval=1
-        M2 = 1,
-        //% block="Module 3" enumval=2
-        M3 = 2,
-    }
-
-
     /**
-    *  M0uld K1ng Module 6.0 init
-    * @param moduleNo moduleNo, eg: "Module 1"
-    */
+     *  initialisation of the module
+     * @param module module, eg: "Module.M1"
+     */
     //% blockId=mk6_init
-    //% block="MK6.0 %moduleNo init"
+    //% block="MK6.0 %module: init"
     //% shim=mk_module_6_0::init
     //% blockGap=8 weight=60
-    export function init(moduleNo: Module): void
+    export function init(module: Module): void
     {
         return;
     }
 
     /**
-    *  M0uld K1ng Module 6.0 SetChannel
-    * @param moduleNo moduleNo, eg: "Module 1"
-    * @param channel channel, eg: "Channel A"
-    * @param value -127..127, eg: "value 0"
-    */
+     *  set value (in percent) of channel
+     * @param module module, eg: "Module.M1"
+     * @param channel channel, eg: "Channel.A"
+     * @param value [-100..100], eg: "80"
+     */
     //% blockId=mk6_setchannel 
-    //% block="MK6.0 %moduleNo set %channel to value %value"
+    //% block="MK6.0 %module: set value %value %% of %channel"
+    //% value.min=-100 value.max=100
     //% shim=mk_module_6_0::setChannel
     //% blockGap=8 weight=60
-    export function setChannel(moduleNo: Module, channel: Channel, value: number): void
+    export function setChannel(module: Module, channel: Channel, value: number): void
     {
         return;
     }
 
     /**
-    *  M0uld K1ng Module 6.0 SetChannelOffset
-    * @param moduleNo moduleNo, eg: "Module 1"
-    * @param channel channel, eg: "Channel A"
-    * @param offset -127..127, eg: "value 0"
-    */
+     *  set offset value (in percent) of channel
+     * @param module module, eg: "Module.M1"
+     * @param channel channel, eg: "Channel.A"
+     * @param offset [0..100], eg: "0"
+     */
     //% blockId=mk6_setchanneloffset
-    //% block="MK6.0 %moduleNo set %channel offset to value %offset"
+    //% block="MK6.0 %module: set offset value %offset %% of %channel"
+    //% offset.min=0 offset.max=100
     //% shim=mk_module_6_0::setChannelOffset
     //% blockGap=8 weight=60
-    export function setChannelOffset(moduleNo: Module, channel: Channel, offset: number): void
+    export function setChannelOffset(moduleNo: Module, channel: Channel, offset: number = 0): void
     {
         return;
     }
 
     /**
-    *  M0uld K1ng Module 6.0 SendData
-    * @param moduleNo moduleNo, eg: "Module 1"
-    */
-    //% blockId=mk6_senddata 
-    //% block="MK6.0 %moduleNo send data"
-    //% shim=mk_module_6_0::sendData
+     *  set maximum value (in percent) of channel
+     * @param module module, eg: "Module.M1"
+     * @param channel channel, eg: "Channel.A"
+     * @param maximum [0..100], eg: "100"
+     */
+    //% blockId=mk6_setchannelmax
+    //% block="MK6.0 %module: set maximum value %maximum %% of %channel"
+    //% maximum.min=0 maximum.max=100
+    //% shim=mk_module_6_0::setChannelMax
     //% blockGap=8 weight=60
-    export function senddata(moduleNo: Module): void
+    export function setChannelMax(moduleNo: Module, channel: Channel, maximum: number = 100): void
     {
         return;
     }
 
     /**
-     * M0uld K1ng Module 6.0 stop advertising
-     * @param moduleNo moduleNo, eg: "Module 1"
+     *  Take over data to send
+     * @param module module, eg: "Module.M1"
+     */
+    //% blockId=mk6_setdata 
+    //% block="MK6.0 %module: take over data to send"
+    //% shim=mk_module_6_0::setData
+    //% blockGap=8 weight=60
+    export function setdata(module: Module): void
+    {
+        return;
+    }
+
+    /**
+     * stop advertising
+     * @param module module, eg: "Module.M1"
      */
     //% blockId=mk6_stop
-    //% block="MK6.0 %moduleNo stop"
+    //% block="MK6.0 %module: stop"
     //% shim=mk_module_6_0::stop
     //% weight=10 blockGap=8
-    export function stop(moduleNo: Module): void
+    export function stop(module: Module): void
     {
         return;
     };
 
 
     /**
-    *  M0uld K1ng Module 6.0 get Version
-    * @param moduleNo moduleNo, eg: "Module 1"
-    */
+     *  get Version
+     * @param module module, eg: "Module.M1"
+     */
     //% blockId=mk6_getversion 
-    //% block="MK6.0 %moduleNo get Version"
+    //% block="MK6.0 %module: get Version"
     //% shim=mk_module_6_0::getVersion
     //% blockGap=8 weight=60 advanced=true
     export function getversion(moduleNo: Module): number

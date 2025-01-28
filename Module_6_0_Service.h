@@ -11,18 +11,50 @@ class Module_6_0_Service : public IBLEAdvClient
     /**
       * Constructor.
       * Create a representation of the MK6ModuleService
-      * @param _BLEAdvManager The instance of a BLEAdvManager that we're running on.
+      * @param bleAdvManager The instance of a BLEAdvManager that we're running on.
       * @param moduleNo Number of the MK6 Module.
       */
-    Module_6_0_Service(BLEAdvManager &_BLEAdvManager, uint8_t moduleNo);
+    Module_6_0_Service(BLEAdvManager &bleAdvManager, uint8_t moduleNo);
 
+    /**
+      *  connect to bleAdvManager
+      */
     void connect();
+
+    /**
+      *  stop advertising
+      */
     void stop();
 
-    void setChannel(uint8_t channel, float value);
-    void setChannelOffset(uint8_t channel, float offset);
-    void sendData();
+    /**
+     *  set value (in percent) of channel
+     * @param channelNo [0..5]
+     * @param value_pct [-100..100], eg: "80"
+     */
+    void setChannel(uint8_t channelNo, float value_pct);
 
+    /**
+     *  set offset value (in percent) of channel
+     * @param channelNo [0..5]
+     * @param offset_pct [0..100], eg: "80"
+     */
+    void setChannelOffset(uint8_t channelNo, float offset_pct);
+
+    /**
+     *  set offset value (in percent) of channel
+     * @param channelNo [0..5]
+     * @param maximum_pct [0..100], eg: "80"
+     */
+    void setChannelMax(uint8_t channelNo, float maximum_pct);
+
+    /**
+     *  Take over data to send
+     */
+    void setData();
+
+    /**
+     *  get Version
+     */
     uint8_t getVersion();
 
   private:
@@ -36,8 +68,11 @@ class Module_6_0_Service : public IBLEAdvClient
     // handle from bleAdvManager returned on registration
     uint8_t m_bleAdvManager_handle;
     
-    float m_channelOffsets[6] = {
+    float m_channelOffsets_pct[6] = {
         0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
+
+    float m_channelMaximums_pct[6] = {
+        100.0, 100.0, 100.0, 100.0, 100.0, 100.0 };
 
     uint8_t m_channelValues[6] = {
         0x80, 0x80, 0x80, 0x80, 0x80, 0x80 };
